@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       standalone: false,
-    }
+    },
   },
   modules: ['@nuxt/eslint'],
 })
