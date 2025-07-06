@@ -4,7 +4,7 @@
       Hello world!
     </h1>
     <button class="btn btn-primary">
-      Rock Climbing <Icon name="guidance:climbing-wall" size="28"/>
+      Rock Climbing <Icon name="guidance:climbing-wall" size="28" />
     </button>
   </div>
 </template>
