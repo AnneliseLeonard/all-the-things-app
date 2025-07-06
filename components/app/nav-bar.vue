@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import App from '~/app.vue';
+
+</script>
+
 <template>
   <div class="navbar bg-primary text-primary-content shadow-sm">
     <div class="navbar-start">
@@ -13,6 +18,7 @@
           <li><a>About</a></li>
         </ul>
       </div>
+      <AppThemeToggle />
     </div>
     <div class="navbar-center">
       <NuxtLink to="/" class="btn btn-ghost text-xl">
