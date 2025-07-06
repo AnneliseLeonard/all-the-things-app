@@ -14,5 +14,8 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-  modules: ['@nuxt/eslint', '@nuxt/icon'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/icon',
+  ],
 })
