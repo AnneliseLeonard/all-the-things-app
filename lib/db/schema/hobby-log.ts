@@ -1,4 +1,5 @@
 import { int, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { user } from './auth';
 import { hobby } from './hobby';
 
 export const hobbyLog = sqliteTable('hobbyLog', {
@@ -8,6 +9,7 @@ export const hobbyLog = sqliteTable('hobbyLog', {
 	startedAt: int(),
 	endedAt: int(),
 	hobbyId: int().notNull().references(() => hobby.id),
+	userId: int().notNull().references(() => user.id),
 	createdAt: int().notNull().$default(() => Date.now()),
 	updatedAt: int().notNull().$default(() => Date.now()).$onUpdate(() => Date.now()),
 });
