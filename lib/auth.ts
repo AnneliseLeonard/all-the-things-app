@@ -1,8 +1,7 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { oneTap } from 'better-auth/plugins';
 
-import db from './db/index'; // your drizzle instance
+import db from './db/index';
 import env from './env';
 
 export const auth = betterAuth({
@@ -14,6 +13,7 @@ export const auth = betterAuth({
 	},
 	socialProviders: {
 		google: {
+			prompt: 'select_account',
 			clientId: env.GOOGLE_CLIENT_ID,
 			clientSecret: env.GOOGLE_CLIENT_SECRET,
 		},
@@ -21,7 +21,4 @@ export const auth = betterAuth({
 	emailAndPassword: {
 		enabled: true,
 	},
-	plugins: [
-		oneTap(), // Add the One Tap server plugin
-	],
 });
