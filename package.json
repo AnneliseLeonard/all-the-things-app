@@ -36,6 +36,7 @@
 		"daisyui": "^5.0.43",
 		"drizzle-kit": "^0.31.4",
 		"eslint-plugin-format": "^1.0.1",
-		"husky": "^9.1.7"
+		"husky": "^9.1.7",
+		"nuxt-vue3-google-signin": "^0.0.11"
 	}
 }
