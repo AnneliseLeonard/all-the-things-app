@@ -30,7 +30,6 @@ export const useAuthStore = defineStore('AuthStore', () => {
 			await authClient.signIn.username({
 				username: '',
 				password: '',
-				callbackURL: '/dashboard',
 			});
 		}
 		finally {

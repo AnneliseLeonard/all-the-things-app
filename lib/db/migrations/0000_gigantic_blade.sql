@@ -31,7 +31,8 @@ CREATE UNIQUE INDEX `session_token_unique` ON `session` (`token`);--> statement-
 CREATE TABLE `user` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`name` text NOT NULL,
-	`email` text,
+	`email` text NOT NULL,
+	`email_verified` integer NOT NULL,
 	`username` text,
 	`display_username` text,
 	`image` text,
@@ -40,7 +41,6 @@ CREATE TABLE `user` (
 );
 --> statement-breakpoint
 CREATE UNIQUE INDEX `user_email_unique` ON `user` (`email`);--> statement-breakpoint
-CREATE UNIQUE INDEX `user_username_unique` ON `user` (`username`);--> statement-breakpoint
 CREATE TABLE `verification` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`identifier` text NOT NULL,
