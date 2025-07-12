@@ -16,7 +16,12 @@ export default defineNuxtConfig({
 			standalone: false,
 		},
 	},
-	modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxtjs/color-mode'],
+	modules: [
+		'@nuxt/eslint',
+		'@nuxt/icon',
+		'@nuxtjs/color-mode',
+		'@pinia/nuxt',
+	],
 	colorMode: {
 		dataValue: 'theme',
 	},

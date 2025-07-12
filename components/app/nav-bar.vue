@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import SignInModal from '../sign-in-modal.vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@
 		</div>
 		<div class="navbar-end">
 			<AppThemeToggle />
-			<a class="btn btn-base-200">Sign In</a>
+			<SignInModal />
 		</div>
 	</div>
 </template>
