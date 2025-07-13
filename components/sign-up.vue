@@ -1,19 +1,16 @@
 <template>
-	<button class="btn" onclick="my_modal_2.showModal()">
+	<button class="btn text-lg" onclick="my_modal_2.showModal()">
 		Sign Up
 	</button>
 	<dialog id="my_modal_2" class="modal">
 		<div class="modal-box bg-base-200 min-w-fit">
-			<h4 class="text-lg font-bold text-center pb-4">
+			<h3 class="text-center text-3xl pb-4">
 				Sign Up
-			</h4>
+			</h3>
 
 			<div class="flex">
 				<div class="w-full m-2 place-self-center">
 					<AuthGoogleSignUp />
-				</div>
-				<div class="w-full ml-2 place-self-center">
-					<AuthUsernameSignUp />
 				</div>
 			</div>
 

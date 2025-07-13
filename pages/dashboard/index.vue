@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { AppDashboardHobbyList } from '#components';
+</script>
+
 <template>
-	<h1>Welcome</h1>
+	<div>
+		<h1>Welcome</h1>
+		<AppDashboardHobbyList />
+	</div>
 </template>

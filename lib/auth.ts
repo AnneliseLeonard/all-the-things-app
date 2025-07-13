@@ -1,7 +1,6 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 
-import { username } from 'better-auth/plugins/username';
 import db from './db/index';
 import env from './env';
 
@@ -19,10 +18,4 @@ export const auth = betterAuth({
 			clientSecret: env.GOOGLE_CLIENT_SECRET,
 		},
 	},
-	emailAndPassword: {
-		enabled: true,
-	},
-	plugins: [
-		username(),
-	],
 });
