@@ -6,7 +6,7 @@ const { hobbies, removeHobby } = useHobbyList();
 
 <template>
 	<div>
-		<ul class="list bg-base-200 rounded-box shadow-md w-3/4 place-self-center p-4">
+		<ul class="list bg-base-200 rounded-box shadow-md w-3/4 p-4">
 			<AppDashboardAddHobby />
 			<li v-for="(hobby, index) in hobbies" :key="index" class="list-row bg-base-300 m-2">
 				<button class="btn" @click="removeHobby(index)">

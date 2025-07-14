@@ -11,7 +11,6 @@
 		</div>
 		<div class="navbar-end">
 			<AppThemeToggle />
-			<SignInModal />
 		</div>
 	</div>
 </template>

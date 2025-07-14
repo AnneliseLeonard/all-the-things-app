@@ -1,12 +1,7 @@
 import { createAuthClient } from 'better-auth/client';
-import { usernameClient } from 'better-auth/client/plugins';
 import { defineStore } from 'pinia';
 
-const authClient = createAuthClient({
-	plugins: [
-		usernameClient(),
-	],
-});
+const authClient = createAuthClient();
 
 export const useAuthStore = defineStore('AuthStore', () => {
 	const loading = ref(false);
@@ -23,8 +18,40 @@ export const useAuthStore = defineStore('AuthStore', () => {
 			loading.value = false;
 		}
 	}
+
+	async function signUpWithEmail(name: string, email: string, password: string) {
+		loading.value = true;
+		try {
+			await authClient.signUp.email({
+				name,
+				email,
+				password,
+				callbackURL: '/dashboard',
+			});
+		}
+		finally {
+			loading.value = false;
+		}
+	}
+
+	async function signInWithEmail(email: string, password: string) {
+		loading.value = true;
+		try {
+			await authClient.signIn.email({
+				email,
+				password,
+				callbackURL: '/dashboard',
+			});
+		}
+		finally {
+			loading.value = false;
+		}
+	}
+
 	return {
 		loading,
 		signInWithGoogle,
+		signUpWithEmail,
+		signInWithEmail,
 	};
 });
