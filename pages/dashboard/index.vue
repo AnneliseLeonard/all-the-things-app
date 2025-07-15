@@ -4,6 +4,8 @@
 <template>
 	<div>
 		<h1>Welcome</h1>
-		<div><AppDashboardHobbyList /></div>
+		<div class="place-items-center">
+			<AppDashboardHobbyList />
+		</div>
 	</div>
 </template>

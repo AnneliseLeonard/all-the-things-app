@@ -5,7 +5,7 @@
 <template>
 	<div class="navbar bg-primary text-primary-content">
 		<div class="navbar-start">
-			<button class="btn btn-ghost text-3xl font-heading">
+			<button id="home" class="btn btn-ghost text-4xl font-bold pb-1">
 				AllTheThings
 			</button>
 		</div>
@@ -14,3 +14,9 @@
 		</div>
 	</div>
 </template>
+
+<style>
+#home {
+	font-family: 'Crimson Pro', serif;
+}
+</style>
