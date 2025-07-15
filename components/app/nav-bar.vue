@@ -5,13 +5,18 @@
 <template>
 	<div class="navbar bg-primary text-primary-content">
 		<div class="navbar-start">
-			<button class="btn btn-ghost text-xl">
+			<button id="home" class="btn btn-ghost text-4xl font-bold pb-1">
 				AllTheThings
 			</button>
 		</div>
 		<div class="navbar-end">
 			<AppThemeToggle />
-			<a class="btn btn-base-200">Sign In</a>
 		</div>
 	</div>
 </template>
+
+<style>
+#home {
+	font-family: 'Crimson Pro', serif;
+}
+</style>
