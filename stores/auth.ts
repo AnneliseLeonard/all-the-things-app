@@ -12,6 +12,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
 			await authClient.signIn.social({
 				provider: 'google',
 				callbackURL: '/dashboard',
+				errorCallbackURL: '/error',
 			});
 		}
 		finally {
@@ -27,6 +28,7 @@ export const useAuthStore = defineStore('AuthStore', () => {
 				email,
 				password,
 				callbackURL: '/dashboard',
+				errorCallbackURL: '/error',
 			});
 		}
 		finally {
