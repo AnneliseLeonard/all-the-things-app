@@ -1,9 +1,11 @@
-import { createAuthClient } from 'better-auth/client';
+import { createAuthClient } from 'better-auth/vue';
 import { defineStore } from 'pinia';
 
 const authClient = createAuthClient();
 
 export const useAuthStore = defineStore('AuthStore', () => {
+	const session = authClient.useSession();
+	const user = computed(() => session.value.data?.user);
 	const loading = ref(false);
 
 	async function signInWithGoogle() {
@@ -12,7 +14,6 @@ export const useAuthStore = defineStore('AuthStore', () => {
 			await authClient.signIn.social({
 				provider: 'google',
 				callbackURL: '/dashboard',
-				errorCallbackURL: '/error',
 			});
 		}
 		finally {
@@ -28,7 +29,6 @@ export const useAuthStore = defineStore('AuthStore', () => {
 				email,
 				password,
 				callbackURL: '/dashboard',
-				errorCallbackURL: '/error',
 			});
 		}
 		finally {
@@ -55,5 +55,6 @@ export const useAuthStore = defineStore('AuthStore', () => {
 		signInWithGoogle,
 		signUpWithEmail,
 		signInWithEmail,
+		user,
 	};
 });
