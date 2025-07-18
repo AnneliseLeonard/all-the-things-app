@@ -29,6 +29,7 @@ async function handleSubmit() {
 		<div class="modal-action">
 			<form method="dialog">
 				<button type="submit" class="btn btn-primary -mt-4" :disabled="authStore.loading" @click="redirect">
+					<span v-if="authStore.loading" class="loading loading-spinner loading-md" />
 					Sign Up
 				</button>
 			</form>
