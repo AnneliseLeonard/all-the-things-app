@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const authStore = useAuthStore();
 </script>
 
 <template>
@@ -9,10 +10,12 @@
 					Welcome
 				</h1>
 				<p class="py-6">
-					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-					quasi. In deleniti eaque aut repudiandae et a id nisi.
+					Track hobbies, work sessions, and projects, set goals, and create a portfolio with All The Things.
 				</p>
-				<SignUp />
+				<SignUp v-if="!authStore.user" />
+				<NuxtLink v-else to="/dashboard" class="btn btn-primary">
+					Start Logging
+				</NuxtLink>
 			</div>
 		</div>
 	</div>
