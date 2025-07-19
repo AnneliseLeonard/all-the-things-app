@@ -20,7 +20,7 @@
 			<AppThemeToggle />
 		</div>
 		<div class="navbar-center">
-			<NuxtLink id="home" to="/" class="btn btn-ghost btn-primary text-4xl font-bold pb-1 text-base-content">
+			<NuxtLink id="home" to="/" class="btn btn-ghost btn-primary text-4xl font-bold pb-1 text-primary-content">
 				<h1 class="">
 					AllTheThings
 				</h1>
@@ -44,9 +44,22 @@
 					tabindex="0"
 					class="menu dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow-sm text-base-content"
 				>
-					<li><a>Account</a></li>
-					<li><a>Settings</a></li>
-					<li><a>Sign Out</a></li>
+					<li>
+						<a>
+							<Icon name="lucide:circle-user" size="20" />
+							Account</a>
+					</li>
+					<li>
+						<a>
+							<Icon name="tabler:settings" size="20" />
+							Settings</a>
+					</li>
+					<li>
+						<NuxtLink to="/sign-out">
+							<Icon name="tabler:logout-2" size="20" />
+							Sign Out
+						</NuxtLink>
+					</li>
 				</ul>
 			</div>
 		</div>

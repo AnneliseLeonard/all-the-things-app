@@ -50,11 +50,17 @@ export const useAuthStore = defineStore('AuthStore', () => {
 		}
 	}
 
+	async function signOut() {
+		await authClient.signOut();
+		navigateTo('/');
+	}
+
 	return {
 		loading,
 		signInWithGoogle,
 		signUpWithEmail,
 		signInWithEmail,
+		signOut,
 		user,
 	};
 });

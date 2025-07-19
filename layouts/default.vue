@@ -5,10 +5,10 @@ const authStore = useAuthStore();
 <template>
 	<div class="flex min-h-screen flex-col">
 		<div v-if="authStore.user">
-			<AppNavBar />
+			<AppDashboardNavBar />
 		</div>
 		<div v-else>
-			<AppDashboardNavBar />
+			<AppNavBar />
 		</div>
 		<main>
 			<slot />
