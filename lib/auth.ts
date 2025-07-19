@@ -16,6 +16,7 @@ export const auth = betterAuth({
 			prompt: 'select_account',
 			clientId: env.GOOGLE_CLIENT_ID,
 			clientSecret: env.GOOGLE_CLIENT_SECRET,
+			errorURL: '/error',
 		},
 	},
 	emailAndPassword: {
@@ -23,5 +24,6 @@ export const auth = betterAuth({
 		disableSignUp: false,
 		requireEmailVerification: false,
 		minPasswordLength: 3,
+		errorURL: '/error',
 	},
 });
